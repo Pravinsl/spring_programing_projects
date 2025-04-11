@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- using property -->
+	<!-- <bean class="com.sp.beans.Address" id="addrId">
+	 <property name="houseno" value="05"/>
+	<property name="city" value="pune"/>
+	<property name="pincode" value="44113"/>
+	</bean>
+	<bean class="com.sp.beans.Student" id="stdId">
+		<property name="rollno" value="21"/>
+		<property name="name" value="deepak"/>
+		<property name="address" ref="addrId"/>
+	</bean> -->
+	<!-- using construction -->
+	<bean class="com.sp.beans.Address" id="addrId">
+	  <constructor-arg value="21"/>
+	  <constructor-arg value="mubai"/>
+	  <constructor-arg value="423"/>
+	</bean>
+	<bean class="com.sp.beans.Student" id="stdId">
+	  <constructor-arg value="102"/>
+	  <constructor-arg value="deepak"/>
+	  <constructor-arg ref="addrId"/>
+	</bean>
+</beans>  
